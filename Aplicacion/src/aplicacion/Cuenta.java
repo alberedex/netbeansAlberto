@@ -54,6 +54,21 @@ public class Cuenta {
     }
 
     /**
+     * Metodo donde se va a modificar el saldo negativamente
+     *
+     * @param cantidad cantidad positiva que se va a restar al saldo del objeto
+     * @throws Exception
+     */
+    public void retirar(double cantidad) throws Exception {
+        if (cantidad <= 0) {
+            throw new Exception("No se puede retirar una cantidad negativa");
+        }
+        if (estado() < cantidad) {
+            throw new Exception("No se hay suficiente saldo");
+        }
+        saldo = saldo - cantidad;
+    }
+    /**
      * Metodo donde devuelve el estado del saldo de un objeto
      *
      * @return
