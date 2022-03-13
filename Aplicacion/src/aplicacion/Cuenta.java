@@ -9,7 +9,7 @@ package aplicacion;
  *
  */
 public class Cuenta {
-
+    //ESTO ES UN COMENTARIO, HOLA!
     private String nombre;
     private String cuenta;
     private double saldo;
